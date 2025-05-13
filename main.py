@@ -3,7 +3,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 import re
 
 # የቦት ቶከን (ከ@BotFather ያገኙትን ያስገቡ)
-TOKEN = "YOUR_BOT_TOKEN_HERE"
+TOKEN = "8107798260:AAEkpepBlixiU2KmMh6mLCl9HVtzqaXTM8s"
 
 # የ/start ትዕዛዝ ተግባር
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -69,7 +69,7 @@ async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def main():
     # የቦት መተግበሪያ መፍጠር
-    app = Application.builder().token(TOKEN).build()
+    app = Application.builder().token(8107798260:AAEkpepBlixiU2KmMh6mLCl9HVtzqaXTM8s).build()
 
     # ትዕዛዞችን እና መልእክቶችን መቆጣጠሪያ መጨመር
     app.add_handler(CommandHandler("start", start))
