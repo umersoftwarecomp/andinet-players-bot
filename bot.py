@@ -3,6 +3,20 @@ import openai
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
+from telegram.error import TelegramError
+import logging
+
+# የlog መደበኛ ቅንብር
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
+)
+logger = logging.getLogger(__name__)
+
+# error handler
+async def error_handler(update, context):
+    logger.error("Exception while handling an update:", exc_info=context.error)
+
+application.add_error_handler(error_handler)
 # Replace with your tokens
 TELEGRAM_BOT_TOKEN = "7873450175:AAEs02Wm-fQOX7M4SgdoMVeBmujZXSWssbE"
 OPENAI_API_KEY = "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"
